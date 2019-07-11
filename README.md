@@ -8,17 +8,17 @@ There will be tasks from practice in this repository.
 
 
 
-#Markdown
+# Markdown
 
 Вы тоже можете узнать про markdown из статей:
 
-* [Wikipedia RU] https://ru.wikipedia.org/wiki/Markdown/
-* [Wikipedia EN] https://en.wikipedia.org/wiki/Markdown/
-* [Github] https://guides.github.com/features/mastering-markdown/
+* [Wikipedia RU](https://ru.wikipedia.org/wiki/Markdown/)
+* [Wikipedia EN](https://en.wikipedia.org/wiki/Markdown/)
+* [GitHub](https://guides.github.com/features/mastering-markdown/)
 
 
 
-##Markdown в деталях
+## Markdown в деталях
 
 Filename extensions | .md, .markdown[1][2]
 --------------------|---------------------
@@ -30,10 +30,10 @@ Latest release | 1.0.1 (December 17, 2004 (13 years ago)[5])
 Type of format | Markup language
 Extended to | MultiMarkdown, Markdown Extra, CommonMark[6]
 Open format? | yes[7]
-Website | [Markdown] http://daringfireball.net/projects/markdown
+Website | [Markdown](http://daringfireball.net/projects/markdown)
 
  
 
-##Реальный пример
+## Реальный пример
 
-[GitHub] https://github.com/Microsoft/TypeScript/blob/master/README.md
+[GitHub](https://github.com/Microsoft/TypeScript/blob/master/README.md)

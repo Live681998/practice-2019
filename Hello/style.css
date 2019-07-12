@@ -1,0 +1,156 @@
+body {
+    background-color: #EAEDF1;
+    width: 1511px;
+    height: 1716px;
+}
+
+.header {
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    background-color: #EAEDF1;
+    margin-top: 82px;
+    margin-left: 80px;
+    margin-right: 83px;
+    width: 1348px;
+    height: 296px;
+}
+
+
+.header-left {
+    box-sizing: border-box;
+    /*border: 1px solid green;*/
+    background-color: white;
+    float: left;
+    width: 435px;
+    height: 296px;
+}
+
+.header-right {
+    box-sizing: border-box;
+    /*border: 1px solid green;*/
+    background-color: white;
+    float: right;
+    width: 825px;
+    height: 296px;
+}
+
+.content {
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    background-color: #EAEDF1;
+    margin-top: 36px;
+    margin-left: 80px;
+    margin-right: 83px;
+    width: 1348px;
+    height: 1174px;
+}
+
+.content-left {
+    box-sizing: border-box;
+    width: 635px;
+    height: 1099px;
+    float: left;
+    /*border: 1px solid green;*/
+}
+
+.content-left-post {
+    box-sizing: border-box;
+    width: 635px;
+    background-color: white;
+}
+.content-left-post1 {
+    height: 341px;
+    margin-bottom: 32px;
+}
+
+.content-left-post2 {
+    height: 322px;
+    margin-bottom: 33px;
+}
+
+.content-left-post3 {
+    height: 170px;
+    margin-bottom: 32px;
+}
+
+.content-left-post4 {
+    height: 169px;
+}
+
+.content-strip {
+    box-sizing: border-box;
+    width: 87px;
+    height: 1174px;
+    float: left;
+    /*border: 1px solid green;*/
+}
+
+.content-right {
+    box-sizing: border-box;
+    width: 626px;
+    height: 1167px;
+    float: right;
+    /*border: 1px solid green;*/
+}
+
+.content-right-post{
+    box-sizing: border-box;
+    width: 626px;
+    background-color: #DBE1E8;
+}
+
+.content-right-post1{
+    height: 171px;
+    margin-bottom: 32px;
+}
+
+.content-right-post2{
+    height: 170px;
+    margin-bottom: 34px;
+}
+
+.content-right-line {
+    border: 1px dashed #DBE1E8 ;
+    border-radius: 3px;
+}
+
+.content-right-post3 {
+    margin-top: 32px;
+    height: 128px;
+    margin-bottom: 32px;
+}
+
+.content-right-post4 {
+    height: 130px;
+    margin-bottom: 34px;
+}
+
+.content-right-post-stat {
+    box-sizing: border-box;
+    width: 626px;
+    height: 401px;
+    background-color: white;
+}
+
+.footer {
+    box-sizing: border-box;
+    margin-top: 47px;
+    margin-left: 80px;
+    margin-right: 83px;
+    width: 1348px;
+    height: 81px;
+    text-align: center;
+}
+
+
+progress {
+    
+}
+
+progress::-webkit-progress-bar {
+    
+}
+
+progress::-webkit-progress-value {
+    
+}

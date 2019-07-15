@@ -163,7 +163,18 @@ body {
 }
 
 .header-right-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.1px;
+    
+    margin-left: 8px;
+    margin-top: -14px;
+    line-height: 30px;
+    text-align: justify;
+}
 
+.header-right-text p > a{
+    color: #16C4EC;
 }
 
 .header-right-link {
@@ -175,13 +186,39 @@ body {
     margin-right: 35px;
 }
 
+.header-right-link p {
+    margin-top: -4px;
+    font-family: 'Signika',sans-serif;
+    color: #33495F;
+    font-size: 22.5px;
+    letter-spacing: 0.2px;
+}
+
+.header-right-link a {
+    display: inline-block;
+    letter-spacing: 2.5px;
+    margin-left: 2px;
+    margin-top: -14px;
+    color: #FA5351;
+    font-size: 22px;
+    font-family: 'Signika', sans-serif;
+}
+
+.header-right-link hr{
+    margin-top: 34px;
+    margin-left: 1px;
+    color: #788695;
+    width: 273px;
+}
+
 .header-right-social {
     box-sizing: border-box;
     float: left;
-    width: 325px;
-    height: 22px;
-    margin-top: 29px;
+    width: 402px;
+    height: 24px;
+    margin-top: 47px;
     margin-left: 24px;
+    
 }
 
 .content {
@@ -208,9 +245,286 @@ body {
     width: 635px;
     background-color: white;
 }
+
+.left-post-header {
+    box-sizing: border-box;
+    width: 626px;
+    height: 116px;
+    
+}
+
+.left-post-header > h1 {
+    float: left;
+    font-family: 'Signika', sans-serif;
+    color: #33495F;
+    font-size: 26px;
+    font-weight: normal;
+    margin-top: 29px;
+    margin-left: 24px;
+    letter-spacing: -0.3px;
+    margin-bottom: 0px;
+}
+
+.left-post-header > p {
+    font-family: 'Lato', sans-serif;
+    float: left;
+    margin-left: 10px;
+    color: #9EA7B4;
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: normal;
+    margin-top: 32px;
+    
+}
+
+.left-post-header > h2 {
+    font-family: 'Signika', sans-serif;
+    clear: both;
+    color: #04BCA6;
+    font-size: 21px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 626px;
+    font-weight: normal;
+    padding-left: 23px;
+    float: left;
+    
+    margin-top: -16px;
+}
+
+.left-post-content {
+    box-sizing: border-box;
+    width: 626px;
+    margin-top: 15px;
+}
+
+.str img {
+    float: left;
+    margin-left: 29px;
+    margin-top: 8px;
+}
+
+.str p {
+    float: left;
+    margin-left: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #495B6E;
+    text-align: justify;
+    letter-spacing: 0.1px;
+}
+
+.str {
+    clear: both;
+    margin: 0px;
+    line-height: 2px;
+}
+
+/*===left-post-footer===*/
+
+.left-post-footer {
+    box-sizing: border-box;
+    width: 635px;
+    height: 62px;
+    clear: both;
+}
+
+.left-post-footer p{
+    font-family: 'Lato', sans-serif;
+    color: #9EA7B4;
+    font-stretch: normal;
+    font-size: 16px;
+}
+
+.left-post-footer > div.location {
+    width: 92px;
+    height: 62px;
+    margin-left: 27px;
+    float: left;
+    
+} 
+
+.left-post-footer > div.location img {
+    float: left;
+}
+
+.left-post-footer > div.location p {
+    float: right;
+}
+
+.left-post-footer > div.date {
+    width: 220px;
+    height: 62px;
+    float: left;
+    
+}
+
+.left-post-footer > div.date img {
+    float: left;
+}
+
+.left-post-footer > div.date p {
+    float: right;
+}
+
+.left-post-footer > div.button {
+    float: right;
+    margin-right: 23px;
+}
+
+ /*post1*/
+
+ .content-left-post1 > div.left-post-footer {
+    margin-top: 29px;
+}
+
+.content-left-post1 > div.left-post-footer > div.location img {
+    margin-top: 10px;
+}
+
+.content-left-post1 > div.left-post-footer > div.location p {
+    margin-top: 8px;
+    margin-right: 5px;
+    letter-spacing: -0.1px;
+}
+
+.content-left-post1 > div.left-post-footer > div.date img {
+    margin-top: 12px;
+    margin-left: 50px;
+}
+
+.content-left-post1 > div.left-post-footer > div.date p {
+    margin-top: 8px;
+    margin-right: 26px;
+    letter-spacing: -0.4px;
+}
+
+/*post2*/
+
+.content-left-post2 > div.left-post-footer {
+    float: left;
+    margin-top: 30px;
+}
+
+.content-left-post2 > div.left-post-footer > div.location img {
+    margin-top: 12px;
+    margin-left: 1px;
+}
+
+.content-left-post2 > div.left-post-footer > div.location p {
+    margin-top: 8px;
+    margin-right: 7px;
+    letter-spacing: -0.4px;
+}
+
+.content-left-post2 > div.left-post-footer > div.date img {
+    margin-top: 13px;
+    margin-left: 42px;
+}
+
+.content-left-post2 > div.left-post-footer > div.date p {
+    margin-top: 8px;
+    margin-right: 38px;
+    
+    letter-spacing: -0.4px;
+
+}
+
+/*post3*/
+
+.content-left-post3 > div.left-post-footer {
+    float: left;
+    margin-top: -21px;
+}
+
+.content-left-post3 > div.left-post-footer > div.location img {
+    margin-top: 12px;
+    margin-left: 0px;
+}
+
+.content-left-post3 > div.left-post-footer > div.location p {
+    margin-top: 9px;
+    margin-right: 7px;
+    letter-spacing: -0.4px;
+}
+
+.content-left-post3 > div.left-post-footer > div.date img {
+    margin-top: 13px;
+    margin-left: 50px;
+}
+
+.content-left-post3 > div.left-post-footer > div.date {
+    width: 240px;
+}
+
+.content-left-post3 > div.left-post-footer > div.date p {
+    margin-top: 10px;
+    margin-right: 42px;
+    letter-spacing: -0.4px;
+}
+
+/*post4*/
+
+.content-left-post4 > div.left-post-footer {
+    float: left;
+    margin-top: -24px;
+}
+
+.content-left-post4 > div.left-post-footer > div.location img {
+    margin-top: 14px;
+    margin-left: 0px;
+}
+
+.content-left-post4 > div.left-post-footer > div.location p {
+    margin-top: 11px;
+    margin-right: 27px;
+    letter-spacing: -0.4px;
+}
+
+.content-left-post4 > div.left-post-footer > div.date img {
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.content-left-post4 > div.left-post-footer > div.date {
+    width: 260px;
+}
+
+.content-left-post4 > div.left-post-footer > div.date p {
+    margin-top: 11px;
+    margin-right: 44px;
+    letter-spacing: -0.4px;
+}
+
+/*======================*/
+
 .content-left-post1 {
     height: 341px;
     margin-bottom: 32px;
+}
+
+div.content-left-post.content-left-post1 > div.left-post-header {
+    box-sizing: border-box;
+    width: 626px;
+    height: 96px;
+}
+
+div.content-left-post.content-left-post1 > div.left-post-header h1 {
+    display: inline-block;
+    width: 146px;
+    height: 30px;
+    margin-top: 29px;
+    margin-left: 24px;
+} 
+
+div.content-left-post.content-left-post1 > div.left-post-header p {
+    display: inline-block;
+    margin-top: 32px;
+    margin-left: 8px;
+    
+}
+
+div.content-left-post.content-left-post1 > div.left-post-content {
+    height: 140px;
 }
 
 .content-left-post2 {
@@ -218,13 +532,51 @@ body {
     margin-bottom: 33px;
 }
 
+div.content-left-post.content-left-post2 > div.left-post-header h1 {
+    margin-top: 27px;
+}
+
+div.content-left-post.content-left-post2 > div.left-post-header p {
+    margin-left: 11px;
+}
+
+.content-left-post2 > div.left-post-content {
+    float: left;
+    margin-top: -17px;
+}
+
+.content-left-post2 > div.left-post-content > div.str {
+    line-height: 6.5px;
+    
+}
+
+.content-left-post2 > div.left-post-content > div.str img {
+    margin-top: 7px;
+}
+
+.content-left-post2 > div.left-post-content > div.str p {
+    margin-top: 11px;
+    text-align: justify;
+    letter-spacing: 0px;
+    word-spacing: 0.3px;
+}
+
 .content-left-post3 {
     height: 170px;
     margin-bottom: 32px;
 }
 
+div.content-left-post.content-left-post3 > div.left-post-header p {
+    margin-left: 6px;
+}
+
 .content-left-post4 {
     height: 169px;
+}
+
+div.content-left-post.content-left-post4 > div.left-post-header p {
+    margin-left: 7px;
+    letter-spacing: -1.15px;
 }
 
 .content-strip {
@@ -249,6 +601,303 @@ body {
     background-color: #DBE1E8;
 }
 
+/*right-post-header*/
+
+.right-post-header {
+    box-sizing: border-box;
+    width: 626px;
+    height: 90px;
+    
+}
+
+.right-post-header > h1 {
+    float: left;
+    font-family: 'Signika', sans-serif;
+    color: #33495F;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 29px;
+    margin-left: 25px;
+    letter-spacing: -0.4px;
+    margin-bottom: 0px;
+}
+
+.right-post-header > p {
+    font-family: 'Lato', sans-serif;
+    float: left;
+    margin-left: 12px;
+    color: #9EA7B4;
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    font-weight: normal;
+    margin-top: 34px;
+    
+}
+
+.right-post-header > h2 {
+    font-family: 'Signika', sans-serif;
+    clear: both;
+    color: #00B9D8;
+    font-size: 18px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 626px;
+    font-weight: normal;
+    padding-left: 25px;
+    float: left;
+    
+    margin-top: -10px;
+}
+
+/*post1*/
+
+.content-right-post1 > div.right-post-header > p {
+    letter-spacing: -0.35px;
+}
+
+/*post2*/
+
+.content-right-post2 > div.right-post-header > h1 {
+    margin-top: 28px;
+}
+
+.content-right-post2 > div.right-post-header > p {
+    letter-spacing: -0.35px;
+}
+
+.content-right-post2 > div.right-post-header > h2 {
+    margin-top: -11px;
+}
+
+/*post3*/
+
+.content-right-post3 > div.right-post-header > h1 {
+    letter-spacing: -0.5px;
+}
+
+.content-right-post3 > div.right-post-header > p {
+    margin-top: 36px;
+    letter-spacing: -0.4px;
+}
+
+.content-right-post3 > div.right-post-header > h2 {
+    color: #04BCA6;
+    margin-top: -11px;
+    letter-spacing: 0px;
+}
+
+/*post4*/
+
+.content-right-post4 > div.right-post-header > h1 {
+    letter-spacing: -0.5px;
+}
+
+.content-right-post4 > div.right-post-header > p {
+    letter-spacing: -0.4px;
+}
+
+.content-right-post4 > div.right-post-header > h2 {
+    color: #04BCA6;
+    margin-top: -9px;
+    letter-spacing: 0px;
+}
+
+/*=======================*/
+
+
+
+/*===right-post-footer===*/
+
+.right-post-footer {
+    box-sizing: border-box;
+    width: 626px;
+    height: 60px;
+    clear: both;
+}
+
+.right-post-footer p{
+    font-family: 'Lato', sans-serif;
+    color: #627181;
+    font-stretch: normal;
+    font-size: 13px;
+}
+
+.right-post-footer > div.location {
+    width: 92px;
+    height: 62px;
+    margin-left: 27px;
+    float: left;
+    
+} 
+
+.right-post-footer > div.location img {
+    float: left;
+}
+
+.right-post-footer > div.location p {
+    float: right;
+}
+
+.right-post-footer > div.date {
+    width: 220px;
+    height: 62px;
+    float: left;
+    
+}
+
+.right-post-footer > div.date img {
+    float: left;
+}
+
+.right-post-footer > div.date p {
+    float: right;
+}
+
+.right-post-footer > div.button {
+    float: right;
+    margin-right: 23px;
+}
+
+.right-post-footer > div.stars {
+    float: right;
+    margin-right: 24px;
+    margin-top: 40px;
+}
+
+/*post1*/
+
+.content-right-post1 > div.right-post-footer {
+    float: left;
+    margin-top: 14px;
+}
+
+.content-right-post1 > div.right-post-footer > div.location img {
+    margin-top: 10px;
+    margin-left: -3px;
+}
+
+.content-right-post1 > div.right-post-footer > div.location p {
+    margin-top: 11px;
+    margin-right: 21px;
+    letter-spacing: -0.4px;
+}
+
+.content-right-post1 > div.right-post-footer > div.date img {
+    margin-top: 11px;
+    margin-left: 47px;
+}
+
+.content-right-post1 > div.right-post-footer > div.date {
+    width: 260px;
+}
+
+.content-right-post1 > div.right-post-footer > div.date p {
+    margin-top: 10px;
+    margin-right: 82px;
+    letter-spacing: -0.25px;
+}
+
+/*post2*/
+
+.content-right-post2 > div.right-post-footer {
+    float: left;
+    margin-top: 15px;
+}
+
+.content-right-post2 > div.right-post-footer > div.location img {
+    margin-top: 11px;
+    margin-left: -2px;
+}
+
+.content-right-post2 > div.right-post-footer > div.location p {
+    margin-top: 12px;
+    margin-right: 20px;
+    letter-spacing: -0.4px;
+}
+
+.content-right-post2 > div.right-post-footer > div.date img {
+    margin-top: 13px;
+    margin-left: 48px;
+}
+
+.content-right-post2 > div.right-post-footer > div.date {
+    width: 260px;
+}
+
+.content-right-post2 > div.right-post-footer > div.date p {
+    margin-top: 12px;
+    margin-right: 73px;
+    letter-spacing: -0.25px;
+}
+
+/*post3*/
+
+.content-right-post3 > div.right-post-footer {
+    float: left;
+    margin-top: -39px;
+}
+
+.content-right-post3 > div.right-post-footer > div.location img {
+    margin-top: 40px;
+    margin-left: -3px;
+}
+
+.content-right-post3 > div.right-post-footer > div.location p {
+    margin-top: 41px;
+    margin-right: 22px;
+    letter-spacing: -0.4px;
+}
+
+.content-right-post3 > div.right-post-footer > div.date img {
+    margin-top: 40px;
+    margin-left: 48px;
+}
+
+.content-right-post3 > div.right-post-footer > div.date {
+    width: 260px;
+}
+
+.content-right-post3 > div.right-post-footer > div.date p {
+    margin-top: 40px;
+    margin-right: 86px;
+    letter-spacing: -0.3px;
+}
+
+/*post4*/
+
+.content-right-post4 > div.right-post-footer {
+    float: left;
+    margin-top: -40px;
+}
+
+.content-right-post4 > div.right-post-footer > div.location img {
+    margin-top: 38px;
+    margin-left: -2px;
+}
+
+.content-right-post4 > div.right-post-footer > div.location p {
+    margin-top: 40px;
+    margin-right: 2px;
+    letter-spacing: -0.3px;
+}
+
+.content-right-post4 > div.right-post-footer > div.date img {
+    margin-top: 40px;
+    margin-left: 48px;
+}
+
+.content-right-post4 > div.right-post-footer > div.date {
+    width: 260px;
+}
+
+.content-right-post4 > div.right-post-footer > div.date p {
+    margin-top: 39px;
+    margin-right: 87px;
+    letter-spacing: -0.28px;
+}
+
+/*=======================*/
+
 .content-right-post1{
     height: 171px;
     margin-bottom: 32px;
@@ -259,7 +908,7 @@ body {
     margin-bottom: 34px;
 }
 
-.content-right-line {
+.content-right-line > hr {
     border: 1px dashed #DBE1E8 ;
     border-radius: 3px;
 }
@@ -282,25 +931,227 @@ body {
     background-color: white;
 }
 
+div.content-right-post-stat > div.stat {
+    box-sizing: border-box;
+    width: 97px;
+    height: 100px;
+    float: left;
+    margin-top: 16px;
+    text-align: center;
+}
+
+div.content-right-post-stat > div.stat > p {
+    margin-top: 4px;
+    font-family: 'Lato', sans-serif;
+    color: #7E8894;
+    font-size: 10pt;
+}
+
+div.content-right-post-stat > div.stat1 {
+    margin-left: 12px;
+}
+
+div.content-right-post-stat > div.stat1 > p {
+    margin-top: 6px;
+    margin-left: -3px;
+    letter-spacing: -0.5px;
+}
+
+div.content-right-post-stat > div.stat2 {
+    margin-left: 5px;
+}
+
+div.content-right-post-stat > div.stat3 {
+    margin-left: 6px;
+}
+
+div.content-right-post-stat > div.stat4 {
+    margin-left: 5px;
+}
+
+div.content-right-post-stat > div.stat5 {
+    margin-left: 6px;
+}
+
+div.content-right-post-stat > div.stat6 {
+    margin-left: 5px;
+}
+
+div.content-right-post-stat > div.stat6 p{
+    margin-top: 3px;
+}
+
 .footer {
     box-sizing: border-box;
-    margin-top: 47px;
+    margin-top: 53px;
     margin-left: 80px;
     margin-right: 83px;
     width: 1348px;
     height: 81px;
+    
+}
+
+.footer p {
+    font-family: 'Signika Negative', sans-serif;
+    font-style: italic;
+    color: #76818E;
+    font-size: 18px;
     text-align: center;
+    margin-top: -138px;
 }
 
-
-progress {
-    
+.footer span:first-child {
+    color: #CED4DD;
+    font-size: 120px;
 }
 
-progress::-webkit-progress-bar {
-    
+.footer span:last-child {
+    color: #CED4DD;
+    font-size: 120px;
 }
 
-progress::-webkit-progress-value {
-    
+div.content-right-post-stat > div.column1 {
+    box-sizing: border-box;
+    width: 280px;
+    height: 205px;
+    float: left;
+    margin-left: 20px;
+    padding-left: 3px;
+    line-height: 10px;
+    padding-top: 36px;
+}
+
+div.content-right-post-stat > div.column1 > p {
+    font-family: 'Lato', sans-serif;
+    color: #7E8894;
+    font-size: 12pt;
+    margin-bottom: 12px;
+    margin-left: 1px;
+}
+
+div.content-right-post-stat > div.column2 > p {
+    font-family: 'Lato', sans-serif;
+    color: #7E8894;
+    font-size: 12pt;
+    margin-bottom: 12px;
+}
+
+div.content-right-post-stat > div.column2 {
+    box-sizing: border-box;
+    width: 280px;
+    height: 205px;
+    float: right;
+    margin-right: 12px;
+    padding-left: 10px;
+    line-height: 10px;
+    padding-top: 34px;
+}
+
+.button {
+    font-family: 'Signika', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+}
+
+.button-active {
+    color: white;
+    background-color: #16C4EC;
+    box-sizing: border-box;
+    width: 218px;
+    height: 39px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 3px;
+}
+
+.button-inactive {
+    color: white;
+    background-color: #B0BBCA;
+    box-sizing: border-box;
+    width: 218px;
+    height: 39px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 3px;
+}
+
+.button-green {
+    color: white;
+    background-color: #10CDC1;
+    box-sizing: border-box;
+    width: 218px;
+    height: 38px;
+    text-align: center;
+    padding-top: 9px;
+    border-radius: 3px;
+    letter-spacing: 0px;
+    font-size: 16px;
+}
+
+.stars {
+    box-sizing: border-box;
+    width: 95px;
+    height: 15px;
+    background-color: grey;
+}
+
+.progress
+{
+  font: 12px Arial, Tahoma, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress progress
+{
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: -777px;
+}
+
+.progress-bar
+{
+  overflow: hidden;
+  background: #ac92ec;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-value
+{
+  color: #333;
+  display: block;
+  line-height: 21px;
+  text-align: center;
+}
+
+.progress-bg
+{
+  background: #DBE1E8;
+  position: relative;
+  height: 15px;
+  width: 270px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar:after
+{
+  background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
 }

@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Signika|Signika+Negative&display=swap');
 
+@font-face {
+    font-family: 'Signika Negative Light';
+    src: url('/style/fonts/Signika_Negative/SignikaNegative-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Signika Light';
+    src: url('/style/fonts/Signika/Signika-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Light Italic';
+    src: url('/style/fonts/Lato/Lato-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Lato Regular Italic';
+    src: url('/style/fonts/Lato/Lato-RegularItalic.ttf');
+}
+
 body {
     background-color: #EAEDF1;
     width: 1511px;
@@ -25,6 +45,7 @@ body {
     float: left;
     width: 435px;
     height: 296px;
+    border-radius: 3px;
 }
 
 .header-left-avatar {
@@ -140,6 +161,7 @@ body {
     float: right;
     width: 825px;
     height: 296px;
+    border-radius: 3px;
 }
 
 .header-right-text {
@@ -244,6 +266,7 @@ body {
     box-sizing: border-box;
     width: 635px;
     background-color: white;
+    border-radius: 3px;
 }
 
 .left-post-header {
@@ -599,6 +622,7 @@ div.content-left-post.content-left-post4 > div.left-post-header p {
     box-sizing: border-box;
     width: 626px;
     background-color: #DBE1E8;
+    border-radius: 3px;
 }
 
 /*right-post-header*/
@@ -992,23 +1016,31 @@ div.content-right-post-stat > div.stat6 p{
 }
 
 .footer p {
-    font-family: 'Signika Negative', sans-serif;
-    font-style: italic;
-    color: #76818E;
+    font-family: 'Lato Regular Italic', sans-serif;
+    letter-spacing: 0.35px;
+    color: #687483;
     font-size: 18px;
     text-align: center;
-    margin-top: -138px;
+    margin-top: -147px;
+    margin-left: 4px;
 }
 
-.footer span:first-child {
+.footer h1 {
     color: #CED4DD;
-    font-size: 120px;
+    font-size: 96px;
 }
 
-.footer span:last-child {
-    color: #CED4DD;
-    font-size: 120px;
+.quot1 {
+    margin-left: 375px; 
+    margin-top: -40px;
 }
+
+.quot2 {
+    margin-left: 930px;
+    margin-top: -115px;
+}
+
+/*===post-stat-column1===*/
 
 div.content-right-post-stat > div.column1 {
     box-sizing: border-box;
@@ -1016,25 +1048,80 @@ div.content-right-post-stat > div.column1 {
     height: 205px;
     float: left;
     margin-left: 20px;
-    padding-left: 3px;
-    line-height: 10px;
-    padding-top: 36px;
+    padding-left: 4px;
+    
+    padding-top: 10px;
 }
 
-div.content-right-post-stat > div.column1 > p {
-    font-family: 'Lato', sans-serif;
-    color: #7E8894;
-    font-size: 12pt;
-    margin-bottom: 12px;
-    margin-left: 1px;
+.column1 > div.pr1 p {
+    letter-spacing: 0.1px;
+    margin-top: 36px;
 }
 
-div.content-right-post-stat > div.column2 > p {
-    font-family: 'Lato', sans-serif;
-    color: #7E8894;
-    font-size: 12pt;
-    margin-bottom: 12px;
+.column1 > div.pr1 > div.progress > progress {
+    float: left;
+    margin-top: -8px;
+    margin-left: -2px;
 }
+
+.column1 > div.pr1 > div.progress > span {
+    margin-top: -33px;
+    margin-left: 196px;
+}
+
+.column1 > div.pr2 p {
+    letter-spacing: 0.1px;
+    margin-top: 34px;
+}
+
+.column1 > div.pr2 > div.progress > progress {
+    float: left;
+    margin-top: -8px;
+    margin-left: -2px;
+}
+
+.column1 > div.pr2 > div.progress > span {
+    margin-top: -32px;
+    margin-left: 122px;
+}
+
+.column1 > div.pr3 p {
+    letter-spacing: 0.1px;
+    margin-top: 38px;
+}
+
+.column1 > div.pr3 > div.progress > progress {
+    float: left;
+    margin-top: -8px;
+    margin-left: -2px;
+}
+
+.column1 > div.pr3 > div.progress > span {
+    margin-top: -32px;
+    margin-left: 231px;
+}
+
+.column1 > div.pr4 p {
+    letter-spacing: 0.1px;
+    margin-top: 35px;
+}
+
+.column1 > div.pr4 > div.progress > progress {
+    float: left;
+    margin-top: -8px;
+    margin-left: -2px;
+}
+
+.column1 > div.pr4 > div.progress > span {
+    margin-top: -33px;
+    margin-left: 206px;
+}
+
+/*=======================*/
+
+
+
+/*===post-stat-column2===*/
 
 div.content-right-post-stat > div.column2 {
     box-sizing: border-box;
@@ -1043,8 +1130,84 @@ div.content-right-post-stat > div.column2 {
     float: right;
     margin-right: 12px;
     padding-left: 10px;
-    line-height: 10px;
-    padding-top: 34px;
+    
+    padding-top: 10px;
+}
+
+.column2 > div.pr1 p {
+    letter-spacing: -0.2px;
+    margin-top: 35px;
+    margin-right: 20px;
+}
+
+.column2 > div.pr1 > div.progress > progress{
+    float: right;
+    margin-top: -8px;
+    margin-right: 1px;
+}
+
+.column2 > div.pr1 > div.progress > span {
+    margin-top: -32px;
+    margin-left: 171px;
+}
+
+.column2 > div.pr2 p {
+    letter-spacing: 0.15px;
+    margin-top: 35px;
+    margin-right: 5px;
+}
+
+.column2 > div.pr2 > div.progress > progress{
+    float: right;
+    margin-top: -8px;
+    margin-right: 1px;
+}
+
+.column2 > div.pr2 > div.progress > span {
+    margin-top: -32px;
+    margin-left: 187px;
+}
+
+.column2 > div.pr3 p {
+    letter-spacing: 0.1px;
+    margin-top: 38px;
+}
+
+.column2 > div.pr3 > div.progress > progress{
+    float: right;
+    margin-top: -8px;
+    margin-right: 1px;    
+}
+
+.column2 > div.pr3 > div.progress > span {
+    margin-top: -32px;
+    margin-left: 138px;
+}
+
+.column2 > div.pr4 p {
+    letter-spacing: 0.15px;
+    margin-top: 35px;
+}
+
+.column2 > div.pr4 > div.progress > progress{
+    float: right;
+    margin-top: -9px;
+    margin-right: 1px;
+}
+
+.column2 > div.pr4 > div.progress > span {
+    margin-top: -32px;
+    margin-left: 172px;
+}
+
+/*=======================*/
+
+div.content-right-post-stat p {
+    font-family: 'Lato', sans-serif;
+    color: #7E8894;
+    font-size: 12pt;
+    margin-bottom: 12px;
+    
 }
 
 .button {
@@ -1090,68 +1253,141 @@ div.content-right-post-stat > div.column2 {
 
 .stars {
     box-sizing: border-box;
-    width: 95px;
-    height: 15px;
-    background-color: grey;
+    width: 96px;
+    height: 16px;
+    
+}
+
+.stars img {
+    float: left;
+    margin-right: 3px;
 }
 
 .progress
 {
-  font: 12px Arial, Tahoma, sans-serif;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
   position: relative;
-  overflow: hidden;
+  color: white;
 }
 
 .progress progress
 {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  left: -777px;
+    background: #DBE1E8;
+    position: relative;
+    height: 15px;
+    width: 270px;
+    border-radius: 6px;
 }
 
-.progress-bar
-{
-  overflow: hidden;
-  background: #ac92ec;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+.progress span {
+    width: 37px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: #34495E;
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    font-size: 10px;
 }
 
-.progress-value
-{
-  color: #333;
-  display: block;
-  line-height: 21px;
-  text-align: center;
+.progress span::after{
+    content: "";
+    position: absolute;
+    border: 3px solid transparent;
+    border-top: 3px solid #34495E;
+    top:18px;
+    right: 16px;
 }
 
-.progress-bg
-{
-  background: #DBE1E8;
-  position: relative;
-  height: 15px;
-  width: 270px;
-  border-radius: 6px;
-  overflow: hidden;
+progress::-webkit-progress-bar {
+    background: #DBE1E8;
+    position: relative;
+    height: 15px;
+    width: 270px;
+    border-radius: 6px;
+  }
+
+.column1 progress::-webkit-progress-value {
+    background-color: #10CDC1;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+.column2 progress::-webkit-progress-value {
+    background-color: #16C4EC;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
-.progress-bar:after
-{
-  background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-  background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-  -webkit-background-size: 40px 40px;
-  background-size: 40px 40px;
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  
+.content-strip > div.line {
+    border-left: 6px solid #DBE1E8;
+    margin-left: 38px;
+    height: 1140px;
+}
+
+.grey {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #DBE1E8;
+    margin-left: 31px;
+}
+
+.white {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-left: 31px;
+}
+
+.w1 {
+    margin-top: -979px;
+}
+
+.g1 {
+    margin-top: 80px;
+}
+
+.g2 {
+    margin-top: 183px;
+}
+
+.w2 {
+    margin-top: 38px;
+}
+
+.g3 {
+    margin-top: 120px;
+}
+
+.w3 {
+    margin-top: 117px;
+}
+
+.g4 {
+    margin-top: 61px;
+}
+
+.w4 {
+    margin-top: 96px;
+}
+
+.g5 {
+    margin-top: 23px;
+}
+
+.year {
+    margin-left: 5px;
+    margin-top: 75px;
+    width: 72px;
+    height: 28px;
+    background-color: #DBE1E8;
+    color: white;
+    text-align: center;
+    padding-top: 6px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 3px;
+    font-size: 20px;
 }

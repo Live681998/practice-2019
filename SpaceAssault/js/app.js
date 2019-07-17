@@ -136,8 +136,8 @@ function handleInput(dt) {
             });
 
             lastFire = Date.now();           
-       }
-}
+    }
+};
 
 function updateEntities(dt) {
     player.sprite.update(dt);
@@ -150,6 +150,9 @@ function updateEntities(dt) {
                 bullet.pos[1] -= bulletSpeed * dt;
                 break;
             case 'down':
+                bullet.pos[1] += bulletSpeed * dt;
+                break;
+            default:
                 bullet.pos[0] += bulletSpeed * dt;            
         }
 

@@ -131,8 +131,8 @@ function handleInput(dt) {
 
             bullets.push({
                 pos: [x, y],
-                       dir: 'down',
-                       sprite: new Sprite('img/sprites.png', [0, 60], [9, 5])
+                dir: 'down',
+                sprite: new Sprite('img/sprites.png', [0, 60], [9, 5])
             });
 
             lastFire = Date.now();           

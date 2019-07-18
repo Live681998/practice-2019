@@ -59,6 +59,7 @@ var bullets = [];
 var enemies = [];
 var explosions = [];
 var megaliths = [];
+var manna = [];
 
 var lastFire = Date.now();
 var gameTime = 0;
@@ -298,20 +299,20 @@ function checkMegalithCollisions() {
         if(boxCollides(pos, size, player.pos, player.sprite.size)) {
             if(input.isDown('DOWN') || input.isDown('s')) {
                 
-                player.pos[1] = pos[1] - player.sprite.size[1];
+                player.pos[1] = pos[1] - player.sprite.size[1] - 1;
             }
         
             if(input.isDown('UP') || input.isDown('w')) {
                 
-                player.pos[1] = pos[1] + size[1];
+                player.pos[1] = pos[1] + size[1] + 1;
             }
         
             if(input.isDown('LEFT') || input.isDown('a')) {
-                player.pos[0] = pos[0] + size[0];
+                player.pos[0] = pos[0] + size[0] + 1;
             }
         
             if(input.isDown('RIGHT') || input.isDown('d')) {
-                player.pos[0] = pos[0] - player.sprite.size[0];
+                player.pos[0] = pos[0] - player.sprite.size[0] - 1;
             }
         }
 

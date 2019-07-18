@@ -32,7 +32,7 @@ function main() {
 
 function init() {
     terrainPattern = ctx.createPattern(resources.get('img/terrain.png'), 'repeat');
-
+    megalithsGenerate();
     document.getElementById('play-again').addEventListener('click', function() {
         reset();
     });
@@ -43,7 +43,7 @@ function init() {
 }
 
 resources.load([
-    'img/sprites.png',
+    'img/sprites_02.png',
     'img/terrain.png'
 ]);
 resources.onReady(init);
@@ -52,12 +52,13 @@ resources.onReady(init);
 
 var player = {
     pos: [0, 0],
-    sprite: new Sprite('img/sprites.png', [0, 0], [39, 39], 16, [0, 1])
+    sprite: new Sprite('img/sprites_02.png', [0, 0], [39, 39], 16, [0, 1])
 };
 
 var bullets = [];
 var enemies = [];
 var explosions = [];
+var megaliths = [];
 
 var lastFire = Date.now();
 var gameTime = 0;
@@ -75,6 +76,30 @@ var playerSpeed = 200;
 var bulletSpeed = 500;
 var enemySpeed = 100;
 
+function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
+}
+
+function megalithsGenerate() {
+    for (var i = 0; i < randomInteger(3, 7); i++) {
+        var megalithsPicture = randomInteger(0, 1);
+        if (megalithsPicture == 1){
+            megaliths.push({
+                pos: [Math.random() * (canvas.width - 55), Math.random() * (canvas.height - 53)],
+                sprite: new Sprite('img/sprites_02.png', [3, 213], [55, 53])
+            });
+        }
+        else{
+            megaliths.push({
+                pos: [Math.random() * (canvas.width - 48), Math.random() * (canvas.height - 42)],
+                sprite: new Sprite('img/sprites_02.png', [5, 274], [48, 42])
+            });
+        }
+    }
+}
+
 function update(dt) {
     gameTime +=dt;
 
@@ -84,7 +109,7 @@ function update(dt) {
     if (Math.random() < 1 - Math.pow(.993, gameTime)) {
         enemies.push({
             pos: [canvas.width, Math.random() * (canvas.height - 39)],
-            sprite: new Sprite('img/sprites.png', [0, 78], [80, 39],
+            sprite: new Sprite('img/sprites_02.png', [0, 78], [80, 39],
                             6, [0, 1, 2, 3, 2, 1])
         });
     }
@@ -120,19 +145,19 @@ function handleInput(dt) {
             bullets.push({ 
                 pos: [x, y],
                 dir: 'forward',
-                sprite: new Sprite('img/sprites.png', [0, 39], [18, 8]) 
+                sprite: new Sprite('img/sprites_02.png', [0, 39], [18, 8]) 
             });
 
             bullets.push({
                 pos: [x, y],
                 dir: 'up',
-                sprite: new Sprite('img/sprites.png', [0, 50], [9, 5])
+                sprite: new Sprite('img/sprites_02.png', [0, 50], [9, 5])
             });
 
             bullets.push({
                 pos: [x, y],
                 dir: 'down',
-                sprite: new Sprite('img/sprites.png', [0, 60], [9, 5])
+                sprite: new Sprite('img/sprites_02.png', [0, 60], [9, 5])
             });
 
             lastFire = Date.now();           
@@ -197,6 +222,7 @@ function boxCollides(pos, size, pos2, size2) {
 
 function checkCollisions() {
     checkPlayerBounds();
+    checkMegalithCollisions();
 
     for (var i = 0; i < enemies.length; i++) {
         var pos = enemies[i].pos;
@@ -215,7 +241,7 @@ function checkCollisions() {
 
                 explosions.push({
                     pos: pos,
-                    sprite: new Sprite('img/sprites.png',
+                    sprite: new Sprite('img/sprites_02.png',
                                        [0, 117],
                                        [39, 39],
                                        16,
@@ -251,10 +277,69 @@ function checkPlayerBounds() {
     }
 }
 
+function checkMegalithCollisions() {
+    for (var i = 0; i < megaliths.length; i++) {
+
+        var pos = megaliths[i].pos;
+        var size = megaliths[i].sprite.size;
+        
+        //Bullet and megalith
+        for(var j=0; j<bullets.length; j++) {
+            var pos2 = bullets[j].pos;
+            var size2 = bullets[j].sprite.size;
+
+            if(boxCollides(pos, size, pos2, size2)) {
+                bullets.splice(j, 1);
+                j--;
+            }
+        }
+
+        // Player and megalith
+        if(boxCollides(pos, size, player.pos, player.sprite.size)) {
+            if(input.isDown('DOWN') || input.isDown('s')) {
+                
+                player.pos[1] = pos[1] - player.sprite.size[1];
+            }
+        
+            if(input.isDown('UP') || input.isDown('w')) {
+                
+                player.pos[1] = pos[1] + size[1];
+            }
+        
+            if(input.isDown('LEFT') || input.isDown('a')) {
+                player.pos[0] = pos[0] + size[0];
+            }
+        
+            if(input.isDown('RIGHT') || input.isDown('d')) {
+                player.pos[0] = pos[0] - player.sprite.size[0];
+            }
+        }
+
+        //Enemies and megalith
+        for (var j = 0; j < enemies.length; j++) {
+            var pos3 = enemies[j].pos;
+            var size3 = enemies[j].sprite.size;
+
+            if(boxCollides(pos, size, pos3, size3)){
+                if ((canvas.height - (pos[1] + size[1]) + 1) > (size3[1])){
+                    enemies[j].pos[1] = pos[1] + size[1] + 1;
+                }
+                else {
+                    enemies[j].pos[1] = pos[1] - size3[1] - 1;
+                }
+            }
+        }
+
+
+    }
+    
+}
+
 function render() {
     ctx.fillStyle = terrainPattern;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    renderEntities(megaliths);
     // Render the player if the game isn't over
     if(!isGameOver) {
         renderEntity(player);

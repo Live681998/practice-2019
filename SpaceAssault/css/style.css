@@ -69,3 +69,10 @@ canvas {
 #game-over button {
     font-size: 1.5em;
 }
+
+#score-manna {
+    float: right;
+    color: grey;
+    font-size: 2em;
+    margin-right: 10px;
+}

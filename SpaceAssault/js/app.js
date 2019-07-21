@@ -32,13 +32,13 @@ function main() {
 
 function init() {
     terrainPattern = ctx.createPattern(resources.get('img/terrain.png'), 'repeat');
-    megalithsGenerate();
-    mannaGenerate(4, 12);
     document.getElementById('play-again').addEventListener('click', function() {
         reset();
     });
 
     reset();
+    megalithsGenerate();
+    mannaGenerate(4, 12);
     lastTime = Date.now();
     main();
 }
@@ -89,17 +89,17 @@ function randomInteger(min, max) {
 }
 
 function megalithsGenerate() {
-    for (var i = 0; i < randomInteger(3, 7); i++) {
+    for (var i = 0; i < randomInteger(4, 8); i++) {
         var megalithsPicture = randomInteger(0, 1);
         if (megalithsPicture == 1){
             megaliths.push({
-                pos: [Math.random() * (canvas.width - 55), Math.random() * (canvas.height - 53)],
+                pos: [randomInteger(player.pos[0] + player.sprite.size[0] + 1, canvas.width - 55) , Math.random() * (canvas.height - 53)],
                 sprite: new Sprite('img/sprites_02.png', [3, 213], [55, 53])
             });
         }
         else{
             megaliths.push({
-                pos: [Math.random() * (canvas.width - 48), Math.random() * (canvas.height - 42)],
+                pos: [randomInteger(player.pos[0] + player.sprite.size[0] + 1, canvas.width - 48), Math.random() * (canvas.height - 42)],
                 sprite: new Sprite('img/sprites_02.png', [5, 274], [48, 42])
             });
         }
@@ -108,9 +108,27 @@ function megalithsGenerate() {
 
 function mannaGenerate(min, max) {
     for (var i = 0; i < randomInteger(min, max); i++) {
+        var randX, randY;
+        var check = false;
+loop:   while (check == false) {
+            randX = randomInteger(0, canvas.width - 53);
+            randY = randomInteger(0, canvas.height - 42);
+            for (var j = 0; j < megaliths.length; j++) {
+                if ((randX > megaliths[j].pos[0] - 53) && 
+                (randX < (megaliths[j].sprite.size[0] + megaliths[j].pos[0])) &&
+                (randY > megaliths[j].pos[1] - 42) &&
+                (randY < (megaliths[j].sprite.size[1] + megaliths[j].pos[1]))) {
+                    check = false;
+                    continue loop;
+                }
+                else {
+                    check = true;
+                }
+            }
+        }
         manna.push({
-            pos: [Math.random() * (canvas.width - 44), Math.random() * (canvas.height - 39)],
-            sprite: new Sprite('img/sprites_02.png', [12, 172], [44, 39], 2, [0, 1])
+            pos: [randX, randY],
+            sprite: new Sprite('img/sprites_02.png', [10, 161], [53, 42], 4, [0, 1])
         });
     }
 }
@@ -356,12 +374,14 @@ function checkMegalithCollisions() {
             var size3 = enemies[j].sprite.size;
 
             if(boxCollides(pos, size, pos3, size3)){
+                enemies[j].pos[0] = pos[0] + size[0];
                 if ((canvas.height - (pos[1] + size[1]) + 1) > (size3[1])){
-                    enemies[j].pos[1] = pos[1] + size[1] + 1;
+                    enemies[j].pos[1] = enemies[j].pos[1] + Math.floor(size[1]/64) + 1;
                 }
                 else {
-                    enemies[j].pos[1] = pos[1] - size3[1] - 1;
+                    enemies[j].pos[1] = enemies[j].pos[1] - Math.floor(size3[1]/64) - 1;
                 }
+                
             }
         }
 
@@ -385,8 +405,8 @@ function checkMannaCollisions() {
                 dispersions.push({
                     pos: pos,
                     sprite: new Sprite('img/sprites_02.png',
-                                       [12, 164],
-                                       [44, 39],
+                                       [10, 161],
+                                       [53, 42],
                                        4,
                                        [0, 1, 2, 3],
                                        null,
@@ -405,11 +425,11 @@ function render() {
     ctx.fillStyle = terrainPattern;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    renderEntities(megaliths);
     // Render the player if the game isn't over
     if(!isGameOver) {
         renderEntity(player);
     }
+    renderEntities(megaliths);
     renderEntities(manna);
     renderEntities(dispersions);
     renderEntities(bullets);

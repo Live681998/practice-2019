@@ -15,9 +15,9 @@ namespace Tanks.Model
         public int Width { get; private set; }
         public int Height { get; private set; }
 
-        public int? FPS { get; private set; }
+        public float? FPS { get; private set; }
         public int? Count { get; private set; }
-        private int? index;
+        private float? index;
         public bool EndAnimation { get; private set; }
         public static Image Image { get; private set; }
 
@@ -49,7 +49,7 @@ namespace Tanks.Model
             }
         }
 
-        public Sprite(int x, int y, int width, int height, int count, int fps)
+        public Sprite(int x, int y, int width, int height, int count, float fps)
         {
             if (Image == null)
             {
@@ -67,7 +67,7 @@ namespace Tanks.Model
             }
         }
 
-        public void SetFrame(int dx)
+        public void SetFrame(float dx)
         {
             index += dx * FPS;
             if (index > Count)

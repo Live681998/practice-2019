@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tanks.Model
+namespace Tanks.Model.Entities
 {
-    public enum Direction
+    interface IShootingEntity
     {
-        RIGHT = 0,
-        UP = 2,
-        LEFT = 1,
-        DOWN = 3
+        float Recharge { get; set; }
     }
 }

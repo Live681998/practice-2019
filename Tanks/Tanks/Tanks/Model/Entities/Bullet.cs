@@ -14,7 +14,7 @@ namespace Tanks.Model.Entities
             Shooter = shooter;
         }
 
-        public override void Move(int dt)
+        public override void Move(float dt)
         {
             base.Move(3*dt);
         }

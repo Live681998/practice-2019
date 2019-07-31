@@ -8,8 +8,10 @@ namespace Tanks.Model.Entities
 {
     public class Wall : StaticEntity
     {
-        public Wall(int x, int y, int width, int height) : base(x, y, width, height)
+        public bool Destroyable { get; private set; }
+        public Wall(int x, int y, int width, int height, bool destroyable) : base(x, y, width, height)
         {
+            Destroyable = destroyable;
         }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\IViewController.cs" />
     <Compile Include="Controller\PacmanController.cs" />
     <Compile Include="Model\Direction.cs" />
     <Compile Include="Model\EntitiesViewModel\AppleViewModel.cs" />
@@ -60,11 +61,12 @@
     <Compile Include="Model\Entities\Boom.cs" />
     <Compile Include="Model\Entities\Bullet.cs" />
     <Compile Include="Model\Entities\DynamicEntity.cs" />
+    <Compile Include="Model\Entities\IShootingEntity.cs" />
     <Compile Include="Model\Entities\Kolobok.cs" />
     <Compile Include="Model\Entities\River.cs" />
     <Compile Include="Model\Entities\StaticEntity.cs" />
     <Compile Include="Model\Entities\Tank.cs" />
-    <Compile Include="Model\GameEngine.cs" />
+    <Compile Include="Model\Log.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +95,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\StatisticsForm.resx">
+      <DependentUpon>StatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

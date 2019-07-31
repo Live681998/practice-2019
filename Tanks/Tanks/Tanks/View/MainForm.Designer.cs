@@ -28,34 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pctCanvas = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pctCanvas)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.imgCanvas = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.btnStart = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCanvas)).BeginInit();
             this.SuspendLayout();
             // 
-            // pctCanvas
+            // imgCanvas
             // 
-            this.pctCanvas.Location = new System.Drawing.Point(12, 12);
-            this.pctCanvas.Name = "pctCanvas";
-            this.pctCanvas.Size = new System.Drawing.Size(649, 343);
-            this.pctCanvas.TabIndex = 0;
-            this.pctCanvas.TabStop = false;
+            this.imgCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imgCanvas.Location = new System.Drawing.Point(0, 0);
+            this.imgCanvas.Name = "imgCanvas";
+            this.imgCanvas.Size = new System.Drawing.Size(673, 367);
+            this.imgCanvas.TabIndex = 0;
+            this.imgCanvas.TabStop = false;
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(0, 0);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 1;
+            this.btnStart.Text = "New game";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 367);
-            this.Controls.Add(this.pctCanvas);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.imgCanvas);
             this.Name = "MainForm";
             this.Text = "Tanks";
-            ((System.ComponentModel.ISupportInitialize)(this.pctCanvas)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.imgCanvas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pctCanvas;
+        private System.Windows.Forms.PictureBox imgCanvas;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button btnStart;
     }
 }
 

@@ -329,6 +329,6 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 
-
+#sprite and level no ignore
 !/**/bin/Debug/sprite.png
 !/**/bin/Debug/level/1.lvl

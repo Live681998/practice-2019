@@ -330,5 +330,5 @@ ASALocalRun/
 .mfractor/
 
 #sprite and level no ignore
-!/**/bin/Debug/sprite.png
-!/**/bin/Debug/level/1.lvl
+!Tanks/Tanks/Tanks/bin/Debug/sprite.png
+!Tanks/Tanks/Tanks/bin/Debug/level/1.lvl

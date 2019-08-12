@@ -13,12 +13,12 @@ namespace Tanks.Model.EntitiesViewModel
         public Sprite Sprite { get; private set; }
         public TankViewModel(int x, int y, int width, int height, Direction dir) : base(x, y, width, height, dir)
         {
-            Sprite = new Sprite(0, 0, width, height, 2, 8);
+            Sprite = new Sprite((int)dir * width, 0, width, height, 2, 8);
         }
 
         public void Draw(Graphics g)
         {
-            Sprite.SetPosition(((int)Direction + 3) % 4 * Width, 0);
+            Sprite.SetPosition((int)Direction * Width, 0);
             Sprite.Draw(g, X, Y);
         }
     }

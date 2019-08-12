@@ -67,6 +67,7 @@
             this.Controls.Add(this.imgCanvas);
             this.Name = "MainForm";
             this.Text = "Tanks";
+            this.TopMost = true;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imgCanvas)).EndInit();
             this.ResumeLayout(false);

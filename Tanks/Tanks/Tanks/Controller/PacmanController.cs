@@ -61,6 +61,7 @@ namespace Controller
             {
                 RefreshLog();
                 form.RefreshDgv(logs);
+                view.Render(IsGame);
             }
             
             func f;

@@ -13,7 +13,7 @@ namespace Tanks.Model.EntitiesViewModel
         public Sprite Sprite { get; private set; }
         public KolobokViewModel(int x, int y, int width, int height, Direction dir) : base(x, y, width, height, dir)
         {
-            Sprite = new Sprite(0, 83, width, height, 2, 16);
+            Sprite = new Sprite(0, 83, width, height, 2, 8);
         }
 
         public void SetSprite(float dx)

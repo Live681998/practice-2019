@@ -48,6 +48,7 @@ namespace Controller
             ResetReload(Player, dt);
             Tanks.ForEach(tank => ResetReload(tank, dt));
 
+            
             CreateApple(2);
             CreateTank(1);
 
@@ -56,14 +57,13 @@ namespace Controller
             Collision(dt);
 
             ShootTanks();
-            
+
             if (!StatisticsForm.isClosed)
             {
                 RefreshLog();
                 form.RefreshDgv(logs);
-                view.Render(IsGame);
             }
-            
+
             func f;
             if (IsGame)
             {
@@ -71,7 +71,6 @@ namespace Controller
                 Booms.ForEach(i => f += i.SetSprite);
                 f(dt);
             }
-
 
             Booms.Where(boom => boom.EndAnimation()).ToList()
                  .ForEach(bang => Booms.Remove(bang));
@@ -431,8 +430,8 @@ namespace Controller
                 return;
             }
 
-            float x = entity.X + entity.Width / 2 - 2;
-            float y = entity.Y + entity.Height / 2 - 2;
+            float x = entity.X + entity.Width / 2 - 6;
+            float y = entity.Y + entity.Height / 2 - 6;
 
             Bullets.Add(new BulletViewModel(Convert.ToInt32(x), Convert.ToInt32(y), 10, 10, entity.Direction, entity));
             (entity as IShootingEntity).Recharge = 0.3f;
